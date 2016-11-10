@@ -14,7 +14,7 @@ import org.springframework.messaging.handler.annotation.SendTo;
 public class SensorDataReporterApplication {
 
 	@StreamListener(Sink.INPUT)
-	public void logReceivedData(ReceivedSensorData data) {
+	public void logReceivedData(String data) {
 		System.out.println(data);
 	}
 

@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.cloud.stream.messaging.Source;
 import org.springframework.integration.annotation.InboundChannelAdapter;
+import org.springframework.integration.annotation.Poller;
+import org.springframework.integration.core.MessageSource;
 
 import java.util.Random;
 
@@ -12,7 +14,7 @@ import java.util.Random;
 @EnableBinding(Source.class)
 public class SensorDataSourceApplication {
 
-    @InboundChannelAdapter(Source.OUTPUT)
+    @InboundChannelAdapter(channel = Source.OUTPUT, poller = @Poller(fixedRate = "10"))
     public SensorData emitSensorData() {
         return new SensorData(new Random().nextInt(10), new Random().nextInt(100));
     }

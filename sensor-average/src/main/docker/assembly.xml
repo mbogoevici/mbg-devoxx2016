@@ -6,10 +6,10 @@
     <dependencySets>
         <dependencySet>
             <includes>
-                <include>ca.mbg.demo.devoxx2016:sensor-data-source</include>
+                <include>ca.mbg.demo.devoxx2016:sensor-average</include>
             </includes>
             <outputDirectory>.</outputDirectory>
-            <outputFileNameMapping>sensor-data-source.jar</outputFileNameMapping>
+            <outputFileNameMapping>sensor-average.jar</outputFileNameMapping>
         </dependencySet>
     </dependencySets>
 </assembly>

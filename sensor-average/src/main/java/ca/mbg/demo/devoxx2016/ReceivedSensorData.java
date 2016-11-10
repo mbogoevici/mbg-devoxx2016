@@ -9,6 +9,14 @@ public class ReceivedSensorData {
 
     private int temperature;
 
+    public ReceivedSensorData() {
+    }
+
+    public ReceivedSensorData(int id, int temperature) {
+        this.id = id;
+        this.temperature = temperature;
+    }
+
     public int getId() {
         return id;
     }
@@ -23,13 +31,5 @@ public class ReceivedSensorData {
 
     public void setTemperature(int temperature) {
         this.temperature = temperature;
-    }
-
-    @Override
-    public String toString() {
-        return "ReceivedSensorData{" +
-                "id=" + id +
-                ", temperature=" + temperature +
-                '}';
     }
 }
